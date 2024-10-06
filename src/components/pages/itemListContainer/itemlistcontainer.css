@@ -1,0 +1,10 @@
+ .saludo-props{
+
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height:50vh;       
+  background-color: lightsalmon;
+
+ }
+
