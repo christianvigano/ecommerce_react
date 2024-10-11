@@ -1,4 +1,4 @@
-import "./card.css"; // Asegúrate de importar el archivo de estilos
+import "./card.css"; //  importar el archivo de estilos
 import Button from "@mui/material/Button"; // Importamos el botón de MUI
 
 const Card = ({ planta, precio, stock, imagen }) => {
