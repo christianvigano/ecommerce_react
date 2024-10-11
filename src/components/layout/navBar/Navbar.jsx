@@ -1,6 +1,6 @@
 import "./navbar.css";
 import CartWidget from "../../common/cartWidget/CartWidget";
-import { Container } from "@mui/material";
+
 
 export const Navbar = () => {
   return (
@@ -11,17 +11,19 @@ export const Navbar = () => {
         alt=""
       />
 
-      <ul className="lista-categorias">
-        <li>
-          <a href=""> Todas </a>
-        </li>
-        <li>
-          <a href=""> Verano </a>
-        </li>
-        <li>
-          <a href=""> Invierno </a>
-        </li>
-      </ul>
+      
+        <ul className="lista-categorias">
+          <li>
+            <a href=""> Todas </a>
+          </li>
+          <li>
+            <a href=""> Verano </a>
+          </li>
+          <li>
+            <a href=""> Invierno </a>
+          </li>
+        </ul>
+      
 
       <CartWidget />
     </div>
