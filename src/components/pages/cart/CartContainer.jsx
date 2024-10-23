@@ -1,7 +1,7 @@
 const CartContainer = () => {
   return (
     <div>
-      <h1>Aca deberian aparecer los items del carrito</h1>
+      <h1>Aca deberian aparecer los items del carrito </h1>
     </div>
   );
 }
