@@ -11,8 +11,8 @@
 
 /* Estilo para la imagen del logo */
 .imagen-logo {
-  width: 100px; /* Ajusta el tamaño del logo */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 180px; /* Ajusta el tamaño del logo */
+  height: 180px; /* Mantiene la proporción de la imagen */
   /*border-radius: 50%;  Da un efecto de borde redondeado (opcional) */
 }
 

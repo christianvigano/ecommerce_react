@@ -1,4 +1,4 @@
-import Card from "../card/Card";
+import Card from "../../common/card/Card";
 
 const ItemList = ({ myProducts }) => {
 
@@ -8,11 +8,12 @@ const ItemList = ({ myProducts }) => {
   return myProducts.map(({ id, imageurl, title, precio, stock }) => (
     
       <Card 
-        key={id}
-        imagen={imageurl}
-        planta={title}
-        precio={precio}
-        stock={stock}
+      key={id}
+      imagen={imageurl}
+      planta={title}
+      precio={precio}
+      stock={stock}
+      id={ id}
       />
     
   ));
