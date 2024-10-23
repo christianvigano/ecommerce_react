@@ -1,0 +1,58 @@
+/* Contenedor general de la tarjeta */
+.card-container {
+  border: 1px solid #e0e0e0; /* Borde sutil */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que el contenido no se salga de los bordes redondeados */
+  width: 300px;
+  min-height: 400px;
+  background-color: #d5d7ac; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(206, 53, 53, 0.1); /* Sombra elegante */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+  text-align: center; /* Centrar el contenido */
+  display: flex;
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+
+}
+
+/* Efecto hover para la tarjeta */
+.card-container:hover {
+  transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Imagen del producto */
+.card-container img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Recorta la imagen si es necesario para que encaje */
+  border-bottom: 1px solid #e0e0e0; /* Borde sutil entre imagen y contenido */
+}
+
+/* Título de la planta */
+.card-container h2 {
+  font-size: 20px;
+  color: #333; /* Color del texto */
+  margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* Precio */
+.card-container .price {
+  font-size: 22px;
+  font-weight: bold; /* Texto en negrita */
+  color: #27ae60; /* Color verde para el precio */
+  margin: 10px 0;
+}
+
+/* Stock */
+.card-container .stock {
+  font-size: 18px;
+  color: #888; /* Color gris */
+}
+
+/* Estilos para el botón MUI centrado */
+.btn-mui {
+  margin: 0 auto; /* Centra el botón horizontalmente */
+  width: 100%; /* Ajusta el tamaño del botón */
+  margin-bottom: 15px; /* Espacio inferior */
+}
