@@ -30,6 +30,8 @@ function App() {
 
         {/*//path para cualquier ruteo que no encuentre*/}
         <Route path="*" element={<h2>404 No se encontro la pagina</h2>} />
+
+       
       </Routes>
       <Footer />
     </BrowserRouter>

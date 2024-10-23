@@ -1,7 +1,9 @@
 const CartContainer = () => {
   return (
-    <div>CartContainer</div>
-  )
+    <div>
+      <h1>Aca deberian aparecer los items del carrito</h1>
+    </div>
+  );
 }
 
 export default CartContainer
