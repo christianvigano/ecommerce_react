@@ -1,9 +1,12 @@
 
+import Counter from "../../common/counter/Counter";
 import "./itemdetail.css"; //  importar el archivo de estilos
 import Button from "@mui/material/Button"; // Importamos el botón de MUI
 
-const ItemDetail = ({ items }) => {
+const ItemDetail = ({ items,agregarAlCarrito }) => {
   const { title, precio, stock, imageurl } = items;
+
+  
 
   return (
     <div className="item-container">
@@ -12,15 +15,11 @@ const ItemDetail = ({ items }) => {
       <h2 className="price">Precio: ${precio}</h2>
       <h2 className="stock">Stock: {stock} unidades</h2>
 
-    
-        {/* Botón MUI centrado */}
-        <Button variant="contained" color="primary" className="btn-mui">
-          Ver Detalle
-        </Button>
-   
+      <Counter stock={stock} agregarAlCarrito={agregarAlCarrito} />
+
       {/* Botón MUI centrado */}
       <Button variant="contained" color="primary" className="btn-mui">
-        Comprar
+        Ver Detalle
       </Button>
     </div>
   );

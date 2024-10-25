@@ -5,6 +5,11 @@ import { Navbar } from "./components/layout/navBar/Navbar";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 import CartContainer from "./components/pages/cart/CartContainer";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
+import Checkout from "./components/pages/checkOut/checkOut";
+
+
+
+
 
 
 function App() {
@@ -24,14 +29,15 @@ function App() {
 
         {/*//path del detalle de la cart*/}
         <Route path="/cart" element={<CartContainer />} />
-        
+
+        {/*//path del detalle de la cart*/}
+        <Route path="/checkout" element={<Checkout />} />
+
         {/*//path dinamico de la cart*/}
         <Route path="/itemdetail/:id" element={<ItemDetailContainer />} />
 
         {/*//path para cualquier ruteo que no encuentre*/}
         <Route path="*" element={<h2>404 No se encontro la pagina</h2>} />
-
-       
       </Routes>
       <Footer />
     </BrowserRouter>
