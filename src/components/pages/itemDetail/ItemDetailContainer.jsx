@@ -13,6 +13,10 @@ const ItemDetailContainer = () => {
   const [itemsDetail, setItemDetails] = useState({});
     
 
+  const agregarAlCarrito = (cantidad) => {
+    let objeto = { ...itemsDetail, quantity: cantidad };
+    console.log(objeto);
+  };
 
     useEffect(() => {
       //cuando uso funcion con llaver si o si tengo que poner el returno
@@ -22,14 +26,15 @@ const ItemDetailContainer = () => {
       let productsSelect = products.find(productos => productos.id == id);
 
       setItemDetails(productsSelect);
+
+
+
     }, [id]);
    
 
 
     return (
-     
-
-      <ItemDetail items={itemsDetail}/> 
+      <ItemDetail items={itemsDetail} agregarAlCarrito={agregarAlCarrito} />
     );
 }
 

@@ -63,7 +63,7 @@ export const products = [
     id: "7",
     title: "Medinilla",
     precio: 1589,
-    stock: 100,
+    stock: 10,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/Medinilla_dxh3f6.jpg",
     description: "Medinilla",

@@ -6,10 +6,11 @@ const CartWidget = () => {
  
 
   return (
+
+    //aca si modifico por chekcout me lleva al 
     <Link to="/cart">
       <Badge badgeContent={3} color="secondary">
         <FaShoppingCart />
-      
       </Badge>
     </Link>
   );
