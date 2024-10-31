@@ -16,10 +16,7 @@ const Card = ({ planta, precio, stock, imagen,id }) => {
           Ver Detalle
         </Button>
       </Link>
-      {/* Botón MUI centrado */}
-      <Button variant="contained" color="primary" className="btn-mui">
-        Comprar
-      </Button>
+      
     </div>
   );
 };

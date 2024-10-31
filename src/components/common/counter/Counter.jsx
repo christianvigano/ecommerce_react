@@ -2,23 +2,20 @@ import { useState } from "react";
 import Button from "@mui/material/Button"; // Importamos el botón de MUI
 
 const Counter = ({ stock, agregarAlCarrito }) => {
-  const [contador, setContador] = useState(0);
+  const [contador, setContador] = useState(1);
 
   const sumar = () => {
     stock > contador ? setContador(contador + 1) : alert("Superaro el stock");
   };
   const restar = () => {
  
-     setContador(contador - 1);
+    contador > 1 && setContador(contador - 1);
+     
     
   };
 
   return (
-    <div
-      style={{
-        margin: "50px",
-      }}
-    >
+    <div>
       <button onClick={sumar}>sumar</button>
       <h2>Contador = {contador}</h2>
       <button
@@ -39,7 +36,7 @@ const Counter = ({ stock, agregarAlCarrito }) => {
           agregarAlCarrito(contador);
         }}
       >
-        Agregar
+        Agregar al Carrito
       </Button>
     </div>
   );

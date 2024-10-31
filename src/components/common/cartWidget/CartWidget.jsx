@@ -1,15 +1,15 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { Badge } from "@mui/material";
-import { Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
 
 const CartWidget = () => {
- 
+  const { cart } = useContext(CartContext);
 
   return (
-
-    //aca si modifico por chekcout me lleva al 
     <Link to="/cart">
-      <Badge badgeContent={3} color="secondary">
+      <Badge badgeContent={cart.length} color="secondary">
         <FaShoppingCart />
       </Badge>
     </Link>
