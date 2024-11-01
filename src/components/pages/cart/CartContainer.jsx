@@ -4,6 +4,8 @@ import { CartContext } from "../../../context/CartContext";
 import "./cartcontainer.css"
 import Button from "@mui/material/Button"; // Importamos el botón de MUI
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
+
 
 
 const CartContainer = () => {
@@ -56,11 +58,20 @@ const CartContainer = () => {
         </button>
       )}
 
-     {/* <Link to="/checkout">*/}
-        {cart.length > 0 && (
-          <button className="btn-mui-vaciar">Finalizar Compra</button>
-        )}
-      {/*</Link>*/}
+      {/* <Link to="/checkout">*/}
+      {cart.length > 0 && (
+        <button className="btn-mui-vaciar">Finalizar Compra</button>
+      )}
+
+      {cart.length === 0 && (
+        <div>
+          <h2 className="mensaje">El carrito se encuentra vacio</h2>
+
+          <Link to="/">
+            <button className="btn-mui-vaciar">Home</button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 

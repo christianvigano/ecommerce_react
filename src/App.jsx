@@ -22,7 +22,7 @@ function App() {
       <CartContextprovider>
         <div id="root">
           <Navbar />
-
+        
           <div className="content">
             <Routes>
               {/*//path raiz, solo puede haber uno solo.*/}
