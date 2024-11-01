@@ -3,10 +3,16 @@ import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import "./cartcontainer.css"
 import Button from "@mui/material/Button"; // Importamos el botón de MUI
+import { toast } from "sonner";
+
 
 const CartContainer = () => {
 
-  const { resetCarrito, cart, removeCartId } = useContext(CartContext);
+  const { resetCarrito, cart, removeCartId, totalCompra } =   useContext(CartContext);
+
+//recibo en el useconectext la funcion y aca la ejecuto cada vez que renderizo el componente
+  const totalCompraARealizar = totalCompra();
+
 
   return (
     <div>
@@ -23,7 +29,13 @@ const CartContainer = () => {
                 variant="contained"
                 color="primary"
                 className="btn-mui-vaciar"
-                onClick={() =>  removeCartId(products.id)}              >
+                onClick={() => {
+                  removeCartId(products.id);
+                  toast.success("Producto Eliminado Correctamente", {
+                    duration: 1000,
+                  });
+                }}
+              >
                 Eliminar Item
               </Button>
             </div>
@@ -31,16 +43,24 @@ const CartContainer = () => {
         })}
         ;
       </div>
-      {/* Botón MUI centrado */}
-      <Button
-        variant="contained"
-        color="primary"
-        className="btn-mui-vaciar"
-        onClick={resetCarrito}
-      >
-        Vaciar Carrito
-      </Button>
-      {/*  <button onClick={resetCarrito}>Vaciar Carrito</button>*/}
+
+      {cart.length > 0 && (
+        <h2 className="total">Total Compra: ${totalCompraARealizar}</h2>
+      )}
+      {/* Mostrar el botón solo si hay productos en el carrito */}
+      {/* Tecnica de rendering dobrel ampersan, si el largo es mayor a cero entonces motra el boton. */}
+
+      {cart.length > 0 && (
+        <button onClick={resetCarrito} className="btn-mui-vaciar">
+          Vaciar Carrito
+        </button>
+      )}
+
+     {/* <Link to="/checkout">*/}
+        {cart.length > 0 && (
+          <button className="btn-mui-vaciar">Finalizar Compra</button>
+        )}
+      {/*</Link>*/}
     </div>
   );
 

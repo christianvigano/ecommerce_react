@@ -4,6 +4,7 @@
   gap: 16px;
   justify-content: center; /* Centra las tarjetas */
   margin-bottom: 20px; /* Espacio entre tarjetas y botón */
+  padding: 80px;
 }
 
 
@@ -78,11 +79,27 @@
 }
 
 /* Estilos para el botón MUI centrado */
-.btn-mui-vaciar {
- 
+
+ .btn-mui-vaciar {
   display: block;
-  margin: 0 auto; /* Centra el botón horizontalmente */
-  margin-top: 10px;
-justify-content: center;
+  margin: 20px auto; /* Centra el botón horizontalmente */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #007BFF; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
+.btn-mui-vaciar:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+.total {
+margin-top: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  color:white;
+}

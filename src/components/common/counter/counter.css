@@ -11,3 +11,7 @@
 margin: 50px;
 margin-bottom: 50px;
 }
+
+.btn-reduce {
+  margin-right: 20px; /* Ajusta el margen derecho para mover el botón a la izquierda */
+}

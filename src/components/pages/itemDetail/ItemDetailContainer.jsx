@@ -10,11 +10,10 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const [itemsDetail, setItemDetails] = useState({});
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, cantidadesTotalesCarrito } = useContext(CartContext);
 
-  /*const x = useContext(CartContext);
+  let cantidadProducto = cantidadesTotalesCarrito(id);
 
-  console.log(x)*/
 
   const agregarAlCarrito = (cantidad) => {
     
@@ -40,7 +39,11 @@ const ItemDetailContainer = () => {
 
 
     return (
-      <ItemDetail items={itemsDetail} agregarAlCarrito={agregarAlCarrito} />
+      <ItemDetail
+        items={itemsDetail}
+        agregarAlCarrito={agregarAlCarrito}
+        cantidadProduct={cantidadProducto}
+      />
     );
 }
 

@@ -1,41 +1,42 @@
-/* Estilos generales para el contenedor del navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+/* navbar.css */
+
+
+
 .container-navbar {
   display: flex;
-  justify-content: space-between; /* Distribuye el espacio entre los elementos */
-  align-items: center; /* Alinea los elementos verticalmente en el centro */
-  padding: 10px 20px; /* Espaciado interno */
-  background-color: #1e9d5b; /* Fondo oscuro para el navbar */
-  color: #fff; /* Color de texto blanco */
-  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  /*background-color: #333; /* Fondo gris oscuro */
+   background-image: url('../../../../public/fondo.jpg');
+   padding-right: 20px;
+   
 }
 
-/* Estilo para la imagen del logo */
 .imagen-logo {
-  width: 180px; /* Ajusta el tamaño del logo */
-  height: 180px; /* Mantiene la proporción de la imagen */
-  /*border-radius: 50%;  Da un efecto de borde redondeado (opcional) */
+  height: 210px;
+  width: 250px;
 }
 
-/* Estilos para la lista de categorías */
 .lista-categorias {
-  list-style: none; /* Elimina los puntos de lista predeterminados */
-  display: flex; /* Alinea los elementos en fila */
-  gap: 20px; /* Espaciado entre los elementos de la lista */
-  margin: 0;
-  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
-/* Estilos para cada item de la lista */
-.lista-categorias li a {
-  color: #fff; /* Color blanco para los enlaces */
-  text-decoration: none; /* Sin subrayado */
-  font-size: 18px; /* Tamaño de texto */
-  padding: 10px 15px; /* Espaciado interno para los enlaces */
-  transition: background-color 0.3s ease; /* Transición suave */
+.nav-button {
+  font-family: 'Poppins', sans-serif; /* Nueva fuente */
+  font-size: 1rem;
+  text-transform: none !important; /* Evita que el texto se muestre en mayúsculas */
+  color: #27ae60 !important;
+  /*background-color: transparent;*/
+  border: 1px solid #27ae60 !important;
+  padding: 5px 15px;
+  border-radius: 20px;
+  /*transition: background-color 0.3s ease, color 0.3s ease;*/
 }
 
-/* Efecto hover en los enlaces */
-.lista-categorias li a:hover {
-  background-color: #555; /* Fondo gris oscuro al pasar el cursor */
-  border-radius: 5px; /* Bordes redondeados */
+.nav-button:hover {
+  background-color: #fff; /* Fondo blanco al pasar el mouse */
+  color: #333; /* Texto en gris oscuro al pasar el mouse */
 }
