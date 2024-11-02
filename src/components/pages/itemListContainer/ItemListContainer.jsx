@@ -3,6 +3,7 @@ import { products } from "../../../products";
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams} from "react-router-dom"
+import { Skeleton } from "@mui/material";
 
 
  //aca declaro la promesa que va a devolver el array de la lectura de los productos o alguna api
@@ -13,7 +14,7 @@ import { useParams} from "react-router-dom"
       setTimeout(() => {
         if (products.length == 0) rej("Productos vacios");
         else res(products);
-      },2500);
+      },5500);
     });
 
 
@@ -48,6 +49,130 @@ const filtradoCategoria = products.filter((nombre) => nombre.category === name);
   }, [name]);
 
 
+if (myProducts.length === 0) {
+  return (
+    <div className="skeleton">
+      <div>
+        <>
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="rectangular"
+            width={310}
+            height={220}
+          />
+
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+        </>
+      </div>
+      <div>
+        <>
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="rectangular"
+            width={310}
+            height={220}
+          />
+
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+        </>
+      </div>
+      <div>
+        <>
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="rectangular"
+            width={310}
+            height={220}
+          />
+
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+        </>
+      </div>
+      <div>
+        <>
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="rectangular"
+            width={310}
+            height={220}
+          />
+
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+          <Skeleton
+            sx={{ bgcolor: "grey.900" }}
+            variant="text"
+            width={310}
+            height={90}
+          />
+        </>
+      </div>
+    </div>
+  );
+}
+
+  
 
   return (
     <div className="il-container">

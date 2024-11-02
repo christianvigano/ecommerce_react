@@ -6,18 +6,18 @@ const ItemList = ({ myProducts }) => {
     //con el map recorro por el key y dessestructuro y paso a la card como props
 
   return myProducts.map(({ id, imageurl, title, precio, stock }) => (
-    
-      <Card 
-      key={id}
-      imagen={imageurl}
-      planta={title}
-      precio={precio}
-      stock={stock}
-      id={ id}
-      />
-    
-  ));
+
       
+      <Card
+        key={id}
+        imagen={imageurl}
+        planta={title}
+        precio={precio}
+        stock={stock}
+        id={id}
+      />
+   
+  ));
 };
 
 export default ItemList;
