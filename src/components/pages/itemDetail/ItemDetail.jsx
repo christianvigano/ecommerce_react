@@ -4,6 +4,7 @@ import "./itemdetail.css"; //  importar el archivo de estilos
 
 
 const ItemDetail = ({ items, agregarAlCarrito, cantidadProduct }) => {
+
   const { title, precio, stock, imageurl } = items;
 
   return (

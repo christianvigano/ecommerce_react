@@ -1,8 +1,9 @@
 import { useState,useEffect, useContext } from "react"
 import ItemDetail from "./ItemDetail"
-import { products } from '../../../products'
 import {useParams } from "react-router-dom"
 import { CartContext } from "../../../context/CartContext"
+import { db } from "../../../../firebaseConfig"
+import { collection, getDoc, doc } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
@@ -10,6 +11,7 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const [itemsDetail, setItemDetails] = useState({});
+  
   const { addToCart, cantidadesTotalesCarrito } = useContext(CartContext);
 
   let cantidadProducto = cantidadesTotalesCarrito(id);
@@ -28,9 +30,22 @@ const ItemDetailContainer = () => {
         //let productsSelect = products.find((productos) => { return productos.id == id });
         //sino va sin llavers, explicito
 
-      let productsSelect = products.find(productos => productos.id == id);
+      //let productsSelect = products.find(productos => productos.id == id);
 
-      setItemDetails(productsSelect);
+      //aca referencio la coleccion de productos
+      const colec = collection(db, "products")
+      //referencio el registor de la coleccion pasando la coleccion y porquelo quiero filtrar.
+      const docs = doc(colec, id)
+
+      //obtengo el registro y armos un objeto nuevo con lo que hay en la data y el id
+      getDoc(docs).then((res) => {
+       
+        setItemDetails({ ...res.data(), id: res.id });
+
+      })
+
+
+      
 
 
 

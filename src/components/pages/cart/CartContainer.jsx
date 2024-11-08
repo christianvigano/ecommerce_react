@@ -58,9 +58,10 @@ const CartContainer = () => {
         </button>
       )}
 
-      {/* <Link to="/checkout">*/}
       {cart.length > 0 && (
-        <button className="btn-mui-vaciar">Finalizar Compra</button>
+        <Link to="/checkout">
+          <button className="btn-mui-vaciar">Finalizar Compra</button>
+        </Link>
       )}
 
       {cart.length === 0 && (

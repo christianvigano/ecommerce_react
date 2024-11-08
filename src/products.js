@@ -6,7 +6,7 @@ export const products = [
     stock: 10,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/bromelia_tndcrq.jpg",
-    description: "Bromelia de Inviernop",
+    description: "Bromelia de Invierno",
     category: "Invierno",
   },
   {

@@ -1,0 +1,32 @@
+/* Formulario.css */
+
+.form-container {
+  max-width: 900px; /* Limita el ancho del formulario */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  padding: 20px;
+  background-color: #d7e2c8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+}
+
+.items-carga{
+
+  margin-top: 30px; 
+   width: 100%; 
+}
+
+
+.boton{
+margin-top: 30px;
+
+}
+
+
+.form-button {
+
+  width: 100%; /* El botón ocupa el mismo ancho que los campos */
+}
