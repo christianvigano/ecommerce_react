@@ -19,16 +19,16 @@ import { Link } from "react-router-dom";
 const Checkout = () => {
   //usecontext para tomar el carrito y el total de compra
   const { cart, totalCompra, resetCarrito } = useContext(CartContext);
-  
+
   //estado informacion para capturar en el formulario
   const [info, setInfo] = useState({ name: "", lastname: "", email: "" });
 
   //estado de la orden para armar el envio del pedido a firebase
   const [orderId, setOrderId] = useState(null);
-  
+
   //estado del loading
   const [loading, setLoading] = useState(false);
-  
+
   //estado del dialog que devuelve el id.
   const [openDialog, setOpenDialog] = useState(false); // Controla el diálogo de confirmación
 
@@ -38,7 +38,7 @@ const Checkout = () => {
 
     //funcion que se ejecuta 1 vez al enviar el formulario para tener el total del carrito.
     const total = totalCompra();
-    
+
     //objeto orden para setear el estado.
     const orders = {
       buyer: info,
@@ -61,7 +61,7 @@ const Checkout = () => {
       //referencio la coleccion de productos para actualizar el stock
       const refColectionActualiza = collection(db, "products");
 
-      //crear todas las promese de items que estan en el docs y las ejecuta en paralelo 
+      //crear todas las promese de items que estan en el docs y las ejecuta en paralelo
       //y espera que termine todas para continuar con el sioguiente loque
       await Promise.all(
         orders.items.map((item) => {

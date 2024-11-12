@@ -26,7 +26,7 @@ const ItemListContainer = () => {
     //aca me conecto y obtengo todos los productos
     const productosColections = collection(db, "products");
 
-  
+ 
      //aca deckario una variabe que carga todo los datos.
     let docsRef = productosColections;
 
@@ -43,10 +43,10 @@ const ItemListContainer = () => {
       let arrayBase = res.docs.map((doc) => {
         return { ...doc.data(), id: doc.id };
       });
-
+    
       setMisProductos(arrayBase);
 
-      console.log(arrayBase);
+    
     });
     
   

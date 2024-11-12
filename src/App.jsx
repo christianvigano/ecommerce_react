@@ -5,7 +5,7 @@ import { Navbar } from "./components/layout/navBar/Navbar";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 import CartContainer from "./components/pages/cart/CartContainer";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
-import Checkout from "./components/pages/checkOut/checkOut";
+import Checkout from "./components/pages/checkout/Checkout"
 import { CartContextprovider } from "./context/CartContext";
 import { Toaster } from "sonner";
 
