@@ -1,4 +1,14 @@
 /* Contenedor general de la tarjeta */
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center; /* Centra las tarjetas */
+  margin-bottom: 20px; /* Espacio entre tarjetas y botón */
+}
+
+
+
 .item-container {
   border: 1px solid #e0e0e0; /* Borde sutil */
   border-radius: 10px; /* Bordes redondeados */
@@ -12,6 +22,7 @@
   display: flex;
   flex-direction: column; /* Organiza los elementos verticalmente */
   justify-content: space-between; /* Distribuye el espacio entre los elementos */
+
 
 }
 

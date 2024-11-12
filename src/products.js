@@ -6,14 +6,14 @@ export const products = [
     stock: 10,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/bromelia_tndcrq.jpg",
-    description: "Bromelia de Inviernop",
+    description: "Bromelia de Invierno",
     category: "Invierno",
   },
   {
     id: "2",
     title: "Cactus",
     precio: 2500,
-    stock: 1,
+    stock: 10,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/cactus_lm3kyo.jpg",
     description: "Cactus",
@@ -43,7 +43,7 @@ export const products = [
     id: "5",
     title: "Helecho",
     precio: 4300,
-    stock: 895,
+    stock: 12,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/helecho_juwcr1.jpg",
     description: "Para colgar en tu patio de luz",
@@ -73,7 +73,7 @@ export const products = [
     id: "8",
     title: "Ajenjo",
     precio: 5698,
-    stock: 25,
+    stock: 8,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/Ajenjo_usztgs.jpg",
     description: "Ajenjo",
@@ -83,7 +83,7 @@ export const products = [
     id: "9",
     title: "Alcaparra",
     precio: 1589,
-    stock: 100,
+    stock: 10,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/Alcaparra_ffcgk4.jpg",
     description: "Alcaparra",
@@ -93,7 +93,7 @@ export const products = [
     id: "10",
     title: "Aloe Vera",
     precio: 4563,
-    stock: 45,
+    stock: 3,
     imageurl:
       "https://res.cloudinary.com/dw7wbrw6v/image/upload/v1728479419/Aloe_Vera_akrrfa.jpg",
     description: "Aloe Vera",
